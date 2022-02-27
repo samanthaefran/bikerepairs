@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Repair Queue</h1>
+{% for item in queue_list %}
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ item.customer_name }}</span>
+    <p>Model: {{ item.model }}</p>
+    <p>Serial: {{ item.serial }}</p>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock %}
